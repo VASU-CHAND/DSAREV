@@ -1,10 +1,16 @@
 #include<iostream>
 using namespace std;
-void reverse(int n, int r, int arr[], int g){
-for(int i=0;i<n/r;i++){
-swap
+void reverse(int n, int r, int arr[]){
+for(int i=0;i< n; i+=r){
+int start =i;
+int end = r  + i -1;
+while(end >=start){
+    swap(arr[start] , arr[end]);
+    end --;
+    start++;
 }
 
+}
 
 }
 int main(){
@@ -23,7 +29,9 @@ for(int i=0;i<n;i++){
 cout << " enter the groups in which araay is to be reversed" << endl;
 int r;
 cin >> r;
-int g= n/r;
-reverse(n,g,arr,g);
+reverse(n, r,arr);
+for(int i =0; i<n; i++){
+    cout << arr[i]<< " ";
+}
 
 }
